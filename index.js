@@ -97,14 +97,28 @@ request.onsuccess=e=>{
     "RollNo":RollNo,
     "Email":Email,
     "co":co,
-    "eduDetails":[
+
+    "eduDetails":
+    {
       "ssc":[
-      "ssctype":sscvalue,
-      "pertype":sscradio,
-      "percentage":sscper,
-      "yearofpass":sscyop
-    ]
-    ]
+      sscvalue,
+      sscradio,
+      sscper,
+      sscyop
+    ],
+     "inter":[
+       intervalue,
+       interradio,
+       interper,
+       interyop
+     ],
+     "btech":[
+       btechvalue,
+       btechradio,
+       btechper,
+       btechyop
+     ]
+  }
   }
 );
   console.log("success....");
