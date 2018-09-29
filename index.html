@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="index.css">
+    <link rel="manifest" href="fevicon525/manifest.json">
   </head>
   <body>
     <form class="">
@@ -71,5 +72,16 @@
     </form>
   </body>
   <script type="text/javascript" src="index.js">
+  </script>
+  <script >
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("sw.js");
+    console.log("serviceWorker registered successfully...");
+  }
+  err=>{
+    console.log("error occured in sw");
+  }
+
+
   </script>
 </html>

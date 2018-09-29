@@ -75,6 +75,7 @@ name=document.getElementById('name').value;
 RollNo=document.getElementById('RollNo').value;
 Email=document.getElementById('Email').value;
 console.log(name+" "+RollNo+" "+Email);
+
 if (!window.indexedDB) {
 console.log("indexedDB is not working...");
 }
@@ -94,7 +95,7 @@ request.onsuccess=e=>{
   store.put(
   {
     "name":name,
-    "RollNo":RollNo,
+    "roll":RollNo,
     "Email":Email,
     "co":co,
 
@@ -123,5 +124,7 @@ request.onsuccess=e=>{
 );
   console.log("success....");
 }
+localStorage.setItem("roll",RollNo);
+window.open("resume.html","_self");
 
 }
